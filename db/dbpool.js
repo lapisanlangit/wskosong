@@ -5,7 +5,7 @@ var pool = mysql.createPool({
   host: '127.0.0.1',
   user: 'root',
   password: '',
-  port: 1005,
+  port: 1006,
   database:'dbsppd',
   timezone: 'utc'
 })

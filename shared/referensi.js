@@ -1,17 +1,12 @@
 
-var dbprom = require('../db/dbpromise');
+
 var db = require('../db/dbpool');
 var base = require('../shared/base');
 const crypto = require('crypto');
 const strKey="aplikasiSPPDpalingOyeSeduania";
 module.exports = {
 
-  getIdSbm: function (itgllaku) {
-      let SQL=`SELECT MAX(idsbm) as idsbm FROM t_sbm WHERE tgllaku <='`+itgllaku+`'`;
-      dbprom.myexec(SQL).then((nil)=>{
-              return nil[0].idsbm;
-      })
-  },
+  
 
   cipherPassword:function(iPass){
 		const cipher = crypto.createCipher('aes192', strKey);

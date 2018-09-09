@@ -17,6 +17,20 @@ router.get('/getSatker/', async function (req, res) {
   }
 })
 
+router.get('/getDetailSatker/', async function (req, res) {
+  try {
+    let SQL = `SELECT * FROM t_satker WHERE kdsatker=`+req.query.kdsatker;
+    let queryResult = await dbasync.myexec(SQL);
+    res.status(200).json(queryResult);
+  } catch (error) {
+    res.status(400).json({
+      error: "true",
+      code: "99",
+      message: "Error Query"
+    })
+  }
+})
+
 
 
 router.post('/cekSatker', async function (req, res) {

@@ -71,6 +71,9 @@ app.use(function(req, res, next) {
 app.use('/rkppn',require('./resources/rkppn'));
 app.use('/rsatker',require('./resources/rsatker'));
 app.use('/ruser',require('./resources/ruser'));
+app.use('/rupload',require('./resources/rupload'));
+app.use('/rpostgres',require('./resources/rpostgres'));
+
 
 
 app.listen(4000,function() {
